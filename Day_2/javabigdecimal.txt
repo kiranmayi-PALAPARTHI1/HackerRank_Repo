@@ -1,0 +1,17 @@
+        //Write your code here
+String newArray[] = new String[n];
+    for(int i= 0;i < newArray.length; i++)
+        {
+        newArray[i] = s[i];
+    }
+
+    Arrays.sort(newArray, Collections.reverseOrder(new Comparator<String>() {
+    @Override
+        public int compare(String n, String m) {
+            BigDecimal a1 = new BigDecimal(n);
+            BigDecimal a2 = new BigDecimal(m);
+            return a1.compareTo(a2);
+        }
+    }));
+
+    s = newArray;
